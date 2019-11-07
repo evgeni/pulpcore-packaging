@@ -10,9 +10,9 @@ License:        LGPL with exceptions or ZPL
 URL:            http://initd.org/psycopg/
 Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
-BuildRequires:  python36-devel
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  libpq-devel
+BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  postgresql-devel
 
 %description
 Psycopg is the most popular PostgreSQL database adapter for the Python
