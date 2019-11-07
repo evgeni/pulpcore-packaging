@@ -30,13 +30,7 @@ Summary:        %{summary}
 {{ dependencies(data.runtime_deps, True, pv, pv) }}
 %description -n {{data.pkg_name|macroed_pkg_name(data.srcname)|name_for_python_version(pv, True) }}
 {{ data.description|truncate(400)|wordwrap }}
-{% endfor -%}
-{%- if data.sphinx_dir %}
-%package -n {{ data.pkg_name|macroed_pkg_name(data.srcname)|name_for_python_version(None, True) }}-doc
-Summary:        {{ data.name }} documentation
-%description -n {{ data.pkg_name|macroed_pkg_name(data.srcname)|name_for_python_version(None, True) }}-doc
-Documentation for {{ data.name }}
-{%- endif %}
+{%- endfor %}
 
 %prep
 %autosetup -n {{ data.dirname|replace(data.name, '%{pypi_name}')|replace(data.version, '%{version}')|default('%{pypi_name}-%{version}', true) }}
@@ -49,12 +43,6 @@ rm -rf %{pypi_name}.egg-info
 {%- for pv in data.sorted_python_versions %}
 %py{{ pv }}_build
 {%- endfor %}
-{%- if data.sphinx_dir %}
-# generate html docs
-PYTHONPATH=${PWD} {{ "sphinx-build"|script_name_for_python_version(data.base_python_version, False, True) }} {{ data.sphinx_dir }} html
-# remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
-{%- endif %}
 
 %install
 {%- if data.python_versions|length > 0 %}
@@ -66,14 +54,8 @@ rm -rf html/.{doctrees,buildinfo}
 rm -rf %{buildroot}%{_bindir}/*
 {%- endif %}
 %py{{ pv }}_install
-{%- endfor -%}
-{% if data.has_test_suite %}
+{% endfor -%}
 
-%check
-{%- for pv in data.sorted_python_versions %}
-%{__python{{ pv }}} setup.py test
-{%- endfor %}
-{%- endif %}
 {% for pv in data.sorted_python_versions %}
 %files -n {{ data.pkg_name|macroed_pkg_name(data.srcname)|name_for_python_version(pv, True) }}
 {%- if data.doc_license %}
@@ -117,13 +99,6 @@ rm -rf %{buildroot}%{_bindir}/*
 %{python{{ pv }}_sitelib}/{{ underscored_or_pypi(data.name, data.underscored_name) }}-%{version}-py%{python{{ pv }}_version}.egg-info
 {%- endif %}
 {% endfor %}
-{%- if data.sphinx_dir %}
-%files -n {{ data.pkg_name|macroed_pkg_name(data.srcname)|name_for_python_version(None, True) }}-doc
-%doc html
-{%- if data.doc_license %}
-%license {{data.doc_license|join(' ')}}
-{%- endif %}
-{% endif %}
 %changelog
 * {{ data.changelog_date_packager }} - {{ data.version }}-1
 - Initial package.
