@@ -9,11 +9,10 @@ Summary:        Advanced Python dictionaries with dot notation access
 
 License:        MIT
 URL:            https://github.com/cdgriffith/Box
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
-BuildRequires:  python3-pytest-runner
 BuildRequires:  python3-setuptools
 
 %description
@@ -28,9 +27,6 @@ Candy","imdb":...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{srcname}}
 
-Requires:       python3-coverage >= 3.6
-Requires:       python3-pytest
-Requires:       python3-pytest-cov
 %description -n python3-%{srcname}
 |BuildStatus| |CoverageStatus| |License| |PyPi| |DocStatus||BoxImage|Python
 dictionaries with advanced dot notation access... code:: python from box import
@@ -43,6 +39,8 @@ Candy","imdb":...
 %autosetup -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
+
+sed -i '/setup_requires/d' setup.py
 
 %build
 %py3_build

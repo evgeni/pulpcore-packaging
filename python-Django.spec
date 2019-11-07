@@ -31,6 +31,7 @@ Requires:       python3-bcrypt
 Requires:       python3-pytz
 Requires:       python3-setuptools
 Requires:       python3-sqlparse
+Provides:       python3-django = %{version}
 %description -n python3-%{pypi_name}
 Django is a high-level Python Web framework that encourages rapid development
 and clean, pragmatic design. Thanks for checking it out.All documentation is in
@@ -43,6 +44,13 @@ order...
 %autosetup -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
+
+# hard-code python3 in django-admin
+pushd django
+for file in bin/django-admin.py conf/project_template/manage.py-tpl ; do
+    sed -i "s/\/env python/\/python3/" $file ;
+done
+popd
 
 %build
 %py3_build

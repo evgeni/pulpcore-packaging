@@ -46,7 +46,6 @@ rm -rf %{pypi_name}.egg-info
 %{_bindir}/rqinfo
 %{_bindir}/rqworker
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/tests
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog

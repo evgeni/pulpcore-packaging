@@ -13,6 +13,9 @@ Source0:        %{pypi_source}
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 
+BuildRequires:  gcc
+BuildRequires:  libyaml-devel
+
 %description
 ruamel.yaml.clib ruamel.yaml.clib is the C based reader/scanner and emitter for
 ruamel.yaml:version: 0.2.0 :updated: 2019-09-26 :documentation: :repository:
@@ -42,13 +45,13 @@ rm -rf %{pypi_name}.egg-info
 %py3_build
 
 %install
-%py3_install
+%{__python3} setup.py install --single-version-externally-managed --skip-build --root $RPM_BUILD_ROOT
 
 %files -n python3-%{pypi_name}
 %license LICENSE
 %doc README.rst
 %{python3_sitearch}/ruamel
-%{python3_sitearch}/_ruamel_yaml.cpython-37m-x86_64-linux-gnu.so
+%{python3_sitearch}/_ruamel_yaml.cpython-3*m-x86_64-linux-gnu.so
 %{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog

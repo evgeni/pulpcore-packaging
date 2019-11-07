@@ -47,7 +47,7 @@ rm -rf %{pypi_name}.egg-info
 %py3_build
 
 %install
-%py3_install
+%{__python3} setup.py install --single-version-externally-managed --skip-build --root $RPM_BUILD_ROOT
 
 %files -n python3-%{pypi_name}
 %license LICENSE

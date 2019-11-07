@@ -10,8 +10,14 @@ License:        MIT
 URL:            https://github.com/yaml/pyyaml
 Source0:        %{pypi_source}
 
+BuildRequires:  gcc
+BuildRequires:  libyaml-devel
+
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
+%if 0%{?rhel} == 8
+BuildRequires:  python3-Cython
+%endif
 
 %description
 YAML is a data serialization format designed for human readability and
@@ -36,6 +42,11 @@ arbitrary...
 %prep
 %autosetup -n %{pypi_name}-%{version}
 
+chmod a-x examples/yaml-highlight/yaml_hl.py
+
+# remove pre-generated file
+rm -rf ext/_yaml.c
+
 %build
 %py3_build
 
@@ -44,8 +55,7 @@ arbitrary...
 
 %files -n python3-%{pypi_name}
 %license LICENSE
-%{python3_sitearch}/yaml
-%{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python3_sitearch}/*
 
 %changelog
 * Thu Nov 07 2019 Evgeni Golov - 5.1.2-1

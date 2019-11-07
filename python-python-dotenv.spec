@@ -9,7 +9,7 @@ Summary:        Add .env support to your django/flask apps in development and de
 
 License:        None
 URL:            http://github.com/theskumar/python-dotenv
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -35,6 +35,8 @@ Status]( [![Coverage Status]( [![PyPI version]( [![Say Thanks!](
 %autosetup -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
+
+sed -i 's/long_description = f.read.*/long_description = "dotenv"/' setup.py
 
 %build
 %py3_build
