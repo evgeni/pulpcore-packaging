@@ -1,4 +1,4 @@
-# Created by pyp2rpm-3.3.2
+# Created by pyp2rpm-3.3.3
 %global pypi_name psycopg2
 
 Name:           python-%{pypi_name}
@@ -8,7 +8,7 @@ Summary:        psycopg2 - Python-PostgreSQL Database Adapter
 
 License:        LGPL with exceptions or ZPL
 URL:            http://initd.org/psycopg/
-Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        %{pypi_source}
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -49,8 +49,8 @@ rm -rf %{pypi_name}.egg-info
 %license doc/src/license.rst LICENSE doc/COPYING.LESSER
 %doc doc/README.rst README.rst
 %{python3_sitearch}/%{pypi_name}
-%{python3_sitearch}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Wed Nov 06 2019 Evgeni Golov - 2.8.4-1
+* Thu Nov 07 2019 Evgeni Golov - 2.8.4-1
 - Initial package.
