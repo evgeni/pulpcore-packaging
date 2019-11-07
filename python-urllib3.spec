@@ -21,15 +21,6 @@ BuildRequires:  python3-setuptools
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Conflicts:      python3-pysocks = 1.5.7
-Requires:       python3-brotlipy >= 0.6.0
-Requires:       python3-ipaddress
-Requires:       python3-certifi
-Requires:       python3-cryptography >= 1.3.4
-Requires:       python3-idna >= 2.0.0
-Requires:       python3-pyOpenSSL >= 0.14
-Requires:       python3-pysocks < 2.0
-Requires:       python3-pysocks >= 1.5.6
 %description -n python3-%{pypi_name}
  :target:
 

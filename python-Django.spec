@@ -26,8 +26,6 @@ order...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-argon2-cffi >= 16.1.0
-Requires:       python3-bcrypt
 Requires:       python3-pytz
 Requires:       python3-setuptools
 Requires:       python3-sqlparse

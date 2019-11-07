@@ -25,7 +25,6 @@ can use autoescaping to prevent XSS from untrusted user input. - A sandboxed...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-babel >= 0.8
 Requires:       python3-markupsafe >= 0.23
 Requires:       python3-setuptools
 %description -n python3-%{pypi_name}

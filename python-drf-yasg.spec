@@ -29,7 +29,6 @@ Summary:        %{summary}
 Requires:       python3-coreapi >= 2.3.3
 Requires:       python3-coreschema >= 0.0.4
 Requires:       python3-inflection >= 0.3.1
-Requires:       python3-swagger-spec-validator >= 2.1.0
 Requires:       python3-django >= 1.11.7
 Requires:       python3-django-rest-framework >= 3.8
 Requires:       python3-packaging

@@ -26,10 +26,6 @@ should pin the version...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-ruamel-ordereddict
-Requires:       python3-ruamel-yaml-jinja2 >= 0.2
-Requires:       python3-ryd
-Requires:       python3-ruamel-yaml-clib >= 0.1.2
 %description -n python3-%{pypi_name}
 ruamel.yaml ruamel.yaml is a YAML 1.2 loader/dumper package for
 Python.:version: 0.16.5 :updated: 2019-08-18 :documentation: :repository:

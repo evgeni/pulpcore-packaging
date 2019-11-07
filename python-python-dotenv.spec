@@ -24,8 +24,6 @@ Status]( [![Coverage Status]( [![PyPI version]( [![Say Thanks!](
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{srcname}}
 
-Requires:       python3-typing
-Requires:       python3-click >= 5.0
 %description -n python3-%{srcname}
  _______ .__ __. ____ ____ | ____|| \ | | \ \ / / | |__ | \| | \ \/ / | __| | .
 | \ / __ | |____ | |\ | \ / (__)|_______||__| \__| \__/python-dotenv | [![Build

@@ -22,19 +22,13 @@ Requests: HTTP for Humans™ [![image]( [![image]( [![image]( [![codecov.io](
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Conflicts:      python3-pysocks = 1.5.7
 Conflicts:      python3-urllib3 = 1.25.0
 Conflicts:      python3-urllib3 = 1.25.1
-Requires:       python3-win-inet-pton
 Requires:       python3-certifi >= 2017.4.17
 Requires:       python3-chardet < 3.1.0
 Requires:       python3-chardet >= 3.0.2
-Requires:       python3-cryptography >= 1.3.4
 Requires:       python3-idna < 2.9
-Requires:       python3-idna >= 2.0.0
 Requires:       python3-idna >= 2.5
-Requires:       python3-pyOpenSSL >= 0.14
-Requires:       python3-pysocks >= 1.5.6
 Requires:       python3-urllib3 < 1.26
 Requires:       python3-urllib3 >= 1.21.1
 %description -n python3-%{pypi_name}

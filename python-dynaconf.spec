@@ -29,18 +29,8 @@ Summary:        %{summary}
 
 Requires:       python3-box
 Requires:       python3-click
-Requires:       python3-configobj
-Requires:       python3-configobj
-Requires:       python3-configobj
 Requires:       python3-dotenv
-Requires:       python3-hvac
-Requires:       python3-hvac
-Requires:       python3-pyyaml
-Requires:       python3-pyyaml
-Requires:       python3-redis
-Requires:       python3-redis
 Requires:       python3-setuptools
-Requires:       python3-toml
 Requires:       python3-toml
 %description -n python3-%{pypi_name}
 [![Dynaconf]( **dynaconf** - The **dyna**mic **conf**igurator for your Python

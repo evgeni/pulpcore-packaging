@@ -24,9 +24,6 @@ server
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-eventlet >= 0.9.7
-Requires:       python3-gevent >= 0.13
-Requires:       python3-tornado >= 0.2
 %description -n python3-%{pypi_name}
 -- Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-
 fork worker model ported from Ruby's Unicorn_ project. The Gunicorn server is

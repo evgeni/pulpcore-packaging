@@ -24,7 +24,6 @@ packages. Do not use sudo
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-hiredis >= 0.1.3
 %description -n python3-%{pypi_name}
 The Python interface to the Redis key-value store. Installation redis-py
 requires a running Redis server. See Redis's quickstart < for installation

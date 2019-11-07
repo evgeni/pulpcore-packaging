@@ -21,7 +21,6 @@ WhiteNoise :target: :target: .. image::
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-brotli
 %description -n python3-%{pypi_name}
 WhiteNoise :target: :target: .. image::
 

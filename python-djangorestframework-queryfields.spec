@@ -12,12 +12,7 @@ Source0:        %{pypi_source}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
-BuildRequires:  python3-mock-django
-BuildRequires:  python3-pytest-django
-BuildRequires:  python3-django
-BuildRequires:  python3-django-rest-framework
 BuildRequires:  python3-setuptools
-BuildRequires:  python3-wheel
 
 %description
 Django REST Framework QueryFields Installation .. code-block:: bash pip install
