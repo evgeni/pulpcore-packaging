@@ -51,7 +51,9 @@ rm -rf %{pypi_name}.egg-info
 
 %files -n python3-%{pypi_name}
 %doc README.rst
-%{python3_sitelib}/pulpcore
+%exclude %{python3_sitelib}/pulpcore/__init__.py
+%exclude %{python3_sitelib}/pulpcore/__pycache__/*
+%{python3_sitelib}/pulpcore/plugin
 %{python3_sitelib}/pulpcore_plugin-%{version}-py%{python3_version}.egg-info
 
 %changelog

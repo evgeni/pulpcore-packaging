@@ -46,6 +46,8 @@ Alerts](
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
+sed -i 's/psycopg2-binary/psycopg2/g' setup.py
+
 %build
 %py3_build
 

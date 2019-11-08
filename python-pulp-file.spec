@@ -22,7 +22,7 @@ information, please see the documentation < or the Pulp project page <>_.
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python3-pulpcore-plugin = 0.1rc7
+Requires:       python3-pulpcore-plugin >= 0.1rc7
 Requires:       python3-setuptools
 %description -n python3-%{pypi_name}
 pulp_file A Pulp plugin to support hosting arbitrary files.For more

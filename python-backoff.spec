@@ -44,13 +44,7 @@ and external
 %files -n python3-%{pypi_name}
 %license LICENSE LICENSE
 %doc README.rst README.rst
-%{python3_sitelib}/__pycache__/*
-%{python3_sitelib}/LICENSE.py
-%{python3_sitelib}/__pycache__/*
-%{python3_sitelib}/README.py
 %{python3_sitelib}/%{pypi_name}
-%{python3_sitelib}/LICENSE
-%{python3_sitelib}/README.rst
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
