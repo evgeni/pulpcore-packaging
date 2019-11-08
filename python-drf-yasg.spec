@@ -13,6 +13,7 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
+BuildRequires:  python3-setuptools-scm
 
 %description
 .. role:: python(code) :language: python drf-yasg - Yet another Swagger

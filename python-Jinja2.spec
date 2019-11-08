@@ -23,6 +23,7 @@ can use autoescaping to prevent XSS from untrusted user input. - A sandboxed...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
+Provides:       python3-jinja2
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 Requires:       python3-markupsafe >= 0.23

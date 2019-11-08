@@ -24,7 +24,6 @@ Summary:        %{summary}
 
 Conflicts:      python3-urllib3 = 1.25.0
 Conflicts:      python3-urllib3 = 1.25.1
-Requires:       python3-certifi >= 2017.4.17
 Requires:       python3-chardet < 3.1.0
 Requires:       python3-chardet >= 3.0.2
 Requires:       python3-idna < 2.9

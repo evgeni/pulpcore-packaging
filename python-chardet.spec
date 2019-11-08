@@ -41,7 +41,7 @@ rm -rf %{pypi_name}.egg-info
 %files -n python3-%{pypi_name}
 %license LICENSE
 %doc docs/README.md README.rst tests/README.txt
-%{_bindir}/chardetect
+%exclude %{_bindir}/chardetect
 %{python3_sitelib}/%{pypi_name}
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 

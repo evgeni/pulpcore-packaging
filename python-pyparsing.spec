@@ -39,6 +39,8 @@ description of...
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
+sed -i 's/pyparsing_main_doc = README.*/pyparsing_main_doc = "pyparsing"/' setup.py
+
 %build
 %py3_build
 
