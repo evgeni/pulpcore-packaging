@@ -10,6 +10,8 @@ License:        None
 URL:            https://github.com/pypa/setuptools
 Source0:        %{pypi_source %{pypi_name} %{version} zip}
 
+BuildArch:      noarch
+
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 
@@ -28,6 +30,9 @@ Requires:       python3-setuptools
 %autosetup -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
+
+# Remove bundled exes
+rm -f setuptools/*.exe
 
 %build
 %{__python3} bootstrap.py
