@@ -1,7 +1,8 @@
 # Created by pyp2rpm-3.3.3
 %global pypi_name MarkupSafe
+%global srcname markupsafe
 
-Name:           python-%{pypi_name}
+Name:           python-%{srcname}
 Version:        1.1.1
 Release:        1%{?dist}
 Summary:        Safely add untrusted strings to HTML/XML markup
@@ -21,12 +22,11 @@ attacks, meaning untrusted user input can safely be displayed on a page.
 Installing -Install and update using pip_:.. code-block:: text pip install -U
 MarkupSafe.....
 
-%package -n     python3-%{pypi_name}
+%package -n     python3-%{srcname}
 Summary:        %{summary}
-Provides:       python3-markupsafe
-%{?python_provide:%python_provide python3-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python3-%{pypi_name}
+%description -n python3-%{srcname}
 MarkupSafe MarkupSafe implements a text object that escapes characters so it is
 safe to use in HTML and XML. Characters that have special meanings are replaced
 so that they display as the actual characters. This mitigates injection
@@ -45,7 +45,7 @@ rm -rf %{pypi_name}.egg-info
 %install
 %py3_install
 
-%files -n python3-%{pypi_name}
+%files -n python3-%{srcname}
 %license LICENSE.rst docs/license.rst
 %doc README.rst
 %{python3_sitearch}/markupsafe

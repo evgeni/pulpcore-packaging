@@ -1,7 +1,8 @@
 # Created by pyp2rpm-3.3.3
 %global pypi_name Click
+%global srcname click
 
-Name:           python-%{pypi_name}
+Name:           python-%{srcname}
 Version:        7.0
 Release:        1%{?dist}
 Summary:        Composable command line interface toolkit
@@ -22,12 +23,11 @@ sensible defaults out of the box.It aims to make the process of writing command
 line tools quick and fun while also preventing any frustration caused by the
 inability to...
 
-%package -n     python3-%{pypi_name}
+%package -n     python3-%{srcname}
 Summary:        %{summary}
-Provides:       python3-click = %{version}
-%{?python_provide:%python_provide python3-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python3-%{pypi_name}
+%description -n python3-%{srcname}
 \$ click\_ Click is a Python package for creating beautiful command line
 interfaces in a composable way with as little code as necessary. It's the
 "Command Line Interface Creation Kit". It's highly configurable but comes with
@@ -46,7 +46,7 @@ rm -rf %{pypi_name}.egg-info
 %install
 %py3_install
 
-%files -n python3-%{pypi_name}
+%files -n python3-%{srcname}
 %license LICENSE.rst docs/license.rst
 %doc README.rst
 %{python3_sitelib}/click

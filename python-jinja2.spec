@@ -1,7 +1,8 @@
 # Created by pyp2rpm-3.3.3
 %global pypi_name Jinja2
+%global srcname jinja2
 
-Name:           python-%{pypi_name}
+Name:           python-%{srcname}
 Version:        2.10.3
 Release:        1%{?dist}
 Summary:        A very fast and expressive template engine
@@ -21,14 +22,13 @@ is passed data to render the final document.It includes:- Template inheritance
 and inclusion. - Define and import macros within templates. - HTML templates
 can use autoescaping to prevent XSS from untrusted user input. - A sandboxed...
 
-%package -n     python3-%{pypi_name}
+%package -n     python3-%{srcname}
 Summary:        %{summary}
-Provides:       python3-jinja2
-%{?python_provide:%python_provide python3-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{srcname}}
 
 Requires:       python3-markupsafe >= 0.23
 Requires:       python3-setuptools
-%description -n python3-%{pypi_name}
+%description -n python3-%{srcname}
 Jinja is a fast, expressive, extensible templating engine. Special placeholders
 in the template allow writing code similar to Python syntax. Then the template
 is passed data to render the final document.It includes:- Template inheritance
@@ -46,7 +46,7 @@ rm -rf %{pypi_name}.egg-info
 %install
 %py3_install
 
-%files -n python3-%{pypi_name}
+%files -n python3-%{srcname}
 %license LICENSE.rst
 %doc README.rst
 %{python3_sitelib}/jinja2

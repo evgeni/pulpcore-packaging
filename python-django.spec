@@ -1,7 +1,8 @@
 # Created by pyp2rpm-3.3.3
 %global pypi_name Django
+%global srcname django
 
-Name:           python-%{pypi_name}
+Name:           python-%{srcname}
 Version:        2.2.7
 Release:        1%{?dist}
 Summary:        A high-level Python Web framework that encourages rapid development and clean, pragmatic design
@@ -22,15 +23,14 @@ we recommend you read the docs:* First, read docs/intro/install.txt for
 instructions on installing Django.* Next, work through the tutorials in
 order...
 
-%package -n     python3-%{pypi_name}
+%package -n     python3-%{srcname}
 Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{srcname}}
 
 Requires:       python3-pytz
 Requires:       python3-setuptools
 Requires:       python3-sqlparse
-Provides:       python3-django = %{version}
-%description -n python3-%{pypi_name}
+%description -n python3-%{srcname}
 Django is a high-level Python Web framework that encourages rapid development
 and clean, pragmatic design. Thanks for checking it out.All documentation is in
 the "docs" directory and online at If you're just getting started, here's how
@@ -56,7 +56,7 @@ popd
 %install
 %py3_install
 
-%files -n python3-%{pypi_name}
+%files -n python3-%{srcname}
 %license django/dispatch/license.txt django/contrib/gis/gdal/LICENSE django/contrib/gis/geos/LICENSE django/contrib/admin/static/admin/js/vendor/xregexp/LICENSE.txt django/contrib/admin/static/admin/js/vendor/jquery/LICENSE.txt django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md django/contrib/admin/static/admin/css/vendor/select2/LICENSE-SELECT2.md django/contrib/admin/static/admin/fonts/LICENSE.txt django/contrib/admin/static/admin/img/LICENSE docs/_theme/djangodocs/static/fontawesome/LICENSE.txt LICENSE LICENSE.python
 %doc django/contrib/admin/static/admin/fonts/README.txt django/contrib/admin/static/admin/img/README.txt docs/_theme/djangodocs/static/fontawesome/README.md tests/README.rst README.rst extras/README.TXT
 %{_bindir}/django-admin
