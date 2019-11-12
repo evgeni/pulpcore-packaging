@@ -1,5 +1,9 @@
 # pulp3 RPMs
 
+## requirements
+
+the scripts in this repository require the [`foreman` branch of `evgeni/pyp2rpm`](https://github.com/evgeni/pyp2rpm/tree/foreman) which contains several patches from upstream PRs
+
 ## collect dependencies
 
 ```
