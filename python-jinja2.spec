@@ -9,7 +9,7 @@ Summary:        A very fast and expressive template engine
 
 License:        BSD-3-Clause
 URL:            https://palletsprojects.com/p/jinja/
-Source0:        %{pypi_source}
+Source0:        %{pypi_source Jinja2}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel

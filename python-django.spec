@@ -9,7 +9,7 @@ Summary:        A high-level Python Web framework that encourages rapid developm
 
 License:        BSD
 URL:            https://www.djangoproject.com/
-Source0:        %{pypi_source}
+Source0:        %{pypi_source Django}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel

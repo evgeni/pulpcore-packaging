@@ -9,7 +9,7 @@ Summary:        Safely add untrusted strings to HTML/XML markup
 
 License:        BSD-3-Clause
 URL:            https://palletsprojects.com/p/markupsafe/
-Source0:        %{pypi_source}
+Source0:        %{pypi_source MarkupSafe}
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools

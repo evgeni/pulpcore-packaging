@@ -9,7 +9,7 @@ Summary:        YAML parser and emitter for Python
 
 License:        MIT
 URL:            https://github.com/yaml/pyyaml
-Source0:        %{pypi_source}
+Source0:        %{pypi_source PyYAML}
 
 BuildRequires:  gcc
 BuildRequires:  libyaml-devel

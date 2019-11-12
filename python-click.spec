@@ -9,7 +9,7 @@ Summary:        Composable command line interface toolkit
 
 License:        BSD
 URL:            https://palletsprojects.com/p/click/
-Source0:        %{pypi_source}
+Source0:        %{pypi_source Click}
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
