@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PYP2RPM=pyp2rpm
-TEMPLATE=./pulp3pyp2rpm.spec
+TEMPLATE=./_pulp3.spec
 
 while read line; do
   pkg=$(echo ${line} |cut -f1 -d=)
