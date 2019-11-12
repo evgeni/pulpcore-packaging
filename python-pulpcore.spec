@@ -47,6 +47,7 @@ Alerts](
 rm -rf %{pypi_name}.egg-info
 
 sed -i 's/psycopg2-binary/psycopg2/g' setup.py
+sed -i "s/'setuptools>.*/'setuptools'/" setup.py
 
 %build
 %py3_build
