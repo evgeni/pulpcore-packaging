@@ -13,4 +13,5 @@ while read line; do
     rpm_name_arg=""
   fi
   $PYP2RPM -b3 -t $TEMPLATE -o fedora --no-autonc --skip-check --no-include-extras -v ${version} ${rpm_name_arg} ${pkg} > python-${pkg_lower}.spec
+  sed -i '/sphinx/d' python-${pkg_lower}.spec
 done
