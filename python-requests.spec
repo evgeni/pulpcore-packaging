@@ -9,6 +9,7 @@ Summary:        Python HTTP for Humans
 License:        Apache 2.0
 URL:            http://python-requests.org
 Source0:        %{pypi_source}
+Patch0:         https://people.redhat.com/egolov/patch-requests-certs.py-to-use-the-system-CA-bundle.patch
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -35,7 +36,7 @@ Requests: HTTP for Humans™ [![image]( [![image]( [![image]( [![codecov.io](
 [![image]( [![image](
 
 %prep
-%autosetup -n %{pypi_name}-%{version}
+%autosetup -p1 -n %{pypi_name}-%{version}
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
