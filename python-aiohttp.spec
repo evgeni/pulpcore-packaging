@@ -26,8 +26,10 @@ Requires:       python3-async-timeout >= 3.0
 Requires:       python3-attrs >= 17.3.0
 Requires:       python3-chardet < 4.0
 Requires:       python3-chardet >= 2.0
+Requires:       python3-idna-ssl
 Requires:       python3-multidict < 5.0
 Requires:       python3-multidict >= 4.5
+Requires:       python3-typing-extensions
 Requires:       python3-yarl < 2.0
 Requires:       python3-yarl >= 1.0
 %description -n python3-%{pypi_name}
