@@ -56,8 +56,7 @@ rm -rf ext/_yaml.c
 
 %files -n python3-%{srcname}
 %license LICENSE
-%{python3_sitearch}/yaml
-%{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python3_sitearch}/*
 
 %changelog
 * Thu Nov 07 2019 Evgeni Golov - 5.1.2-1
