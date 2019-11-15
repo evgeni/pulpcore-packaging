@@ -25,7 +25,7 @@ should pin the version...
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
 Requires:       python3-ruamel.yaml.clib
-Provides:       python3-ruamel-yaml
+Provides:       python3-ruamel-yaml = %{version}-%{release}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 %description -n python3-%{pypi_name}
