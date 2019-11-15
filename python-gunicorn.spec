@@ -2,13 +2,13 @@
 %global pypi_name gunicorn
 
 Name:           python-%{pypi_name}
-Version:        19.9.0
+Version:        20.0.0
 Release:        1%{?dist}
 Summary:        WSGI HTTP Server for UNIX
 
 License:        MIT
 URL:            http://gunicorn.org
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/g/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -24,6 +24,7 @@ server
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
+Requires:       python3-setuptools >= 3.0
 %description -n python3-%{pypi_name}
 -- Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-
 fork worker model ported from Ruby's Unicorn_ project. The Gunicorn server is
@@ -43,12 +44,11 @@ rm -rf %{pypi_name}.egg-info
 
 %files -n python3-%{pypi_name}
 %license LICENSE
-%doc docs/README.rst README.rst
+%doc README.rst docs/README.rst
 %{_bindir}/gunicorn
-%{_bindir}/gunicorn_paster
 %{python3_sitelib}/%{pypi_name}
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 19.9.0-1
+* Fri Nov 15 2019 Evgeni Golov - 20.0.0-1
 - Initial package.
