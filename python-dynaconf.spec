@@ -2,13 +2,13 @@
 %global pypi_name dynaconf
 
 Name:           python-%{pypi_name}
-Version:        2.1.1
+Version:        2.2.0
 Release:        1%{?dist}
 Summary:        The dynamic configurator for your Python Project
 
 License:        MIT
 URL:            https://github.com/rochacbruno/dynaconf
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/d/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -59,5 +59,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 2.1.1-1
+* Fri Nov 15 2019 Evgeni Golov - 2.2.0-1
 - Initial package.
