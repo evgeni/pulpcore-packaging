@@ -2,13 +2,13 @@
 %global pypi_name pyparsing
 
 Name:           python-%{pypi_name}
-Version:        2.4.4
+Version:        2.4.5
 Release:        1%{?dist}
 Summary:        Python parsing module
 
 License:        MIT License
 URL:            https://github.com/pyparsing/pyparsing/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -39,8 +39,6 @@ description of...
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
-sed -i 's/pyparsing_main_doc = README.*/pyparsing_main_doc = "pyparsing"/' setup.py
-
 %build
 %py3_build
 
@@ -55,5 +53,5 @@ sed -i 's/pyparsing_main_doc = README.*/pyparsing_main_doc = "pyparsing"/' setup
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 2.4.4-1
+* Fri Nov 15 2019 Evgeni Golov - 2.4.5-1
 - Initial package.
