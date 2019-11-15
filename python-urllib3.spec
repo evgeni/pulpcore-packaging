@@ -2,27 +2,37 @@
 %global pypi_name urllib3
 
 Name:           python-%{pypi_name}
-Version:        1.25.6
+Version:        1.25.7
 Release:        1%{?dist}
 Summary:        HTTP library with thread-safe connection pooling, file post, and more
 
 License:        MIT
 URL:            https://urllib3.readthedocs.io/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/u/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 
 %description
- :target:
+urllib3 is a powerful, *sanity-friendly* HTTP client for Python. Much of the
+Python ecosystem already uses urllib3 and you should too. urllib3 brings many
+critical features that are missing from the Python standard libraries:- Thread
+safety. - Connection pooling. - Client-side SSL/TLS verification. - File
+uploads with multipart encoding. - Helpers for retrying requests and dealing
+with HTTP...
 
 %package -n     python3-%{pypi_name}
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
 %description -n python3-%{pypi_name}
- :target:
+urllib3 is a powerful, *sanity-friendly* HTTP client for Python. Much of the
+Python ecosystem already uses urllib3 and you should too. urllib3 brings many
+critical features that are missing from the Python standard libraries:- Thread
+safety. - Connection pooling. - Client-side SSL/TLS verification. - File
+uploads with multipart encoding. - Helpers for retrying requests and dealing
+with HTTP...
 
 %prep
 %autosetup -n %{pypi_name}-%{version}
@@ -42,5 +52,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 1.25.6-1
+* Fri Nov 15 2019 Evgeni Golov - 1.25.7-1
 - Initial package.
