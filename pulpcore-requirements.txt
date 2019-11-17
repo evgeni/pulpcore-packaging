@@ -24,7 +24,7 @@ MarkupSafe==1.1.1
 multidict==4.5.2
 packaging==19.2
 psycopg2==2.8.4
-pulp-file==0.1.0b4
+pulp-file==0.1.0rc1
 pulpcore==3.0.0rc8
 pyparsing==2.4.5
 python-box==3.4.5
