@@ -8,7 +8,7 @@ Summary:        Web APIs for Django, made easy
 
 License:        BSD
 URL:            https://www.django-rest-framework.org/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/d/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -53,5 +53,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 3.10.3-1
+* Mon Nov 18 2019 Evgeni Golov - 3.10.3-1
 - Initial package.

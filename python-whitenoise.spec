@@ -8,7 +8,7 @@ Summary:        Radically simplified static file serving for WSGI applications
 
 License:        MIT
 URL:            http://whitenoise.evans.io
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/w/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -42,5 +42,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 4.1.4-1
+* Mon Nov 18 2019 Evgeni Golov - 4.1.4-1
 - Initial package.

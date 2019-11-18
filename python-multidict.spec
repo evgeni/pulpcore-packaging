@@ -8,7 +8,7 @@ Summary:        multidict implementation
 
 License:        Apache 2
 URL:            https://github.com/aio-libs/multidict
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/m/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -41,5 +41,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 08 2019 Evgeni Golov - 4.5.2-1
+* Mon Nov 18 2019 Evgeni Golov - 4.5.2-1
 - Initial package.

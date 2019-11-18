@@ -51,5 +51,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/typing_extensions-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 08 2019 Evgeni Golov - 3.7.4.1-1
+* Mon Nov 18 2019 Evgeni Golov - 3.7.4.1-1
 - Initial package.

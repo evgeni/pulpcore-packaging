@@ -8,7 +8,7 @@ Summary:        Timeout context manager for asyncio programs
 
 License:        Apache 2
 URL:            https://github.com/aio-libs/async_timeout/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/a/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -44,5 +44,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/async_timeout-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 08 2019 Evgeni Golov - 3.0.1-1
+* Mon Nov 18 2019 Evgeni Golov - 3.0.1-1
 - Initial package.

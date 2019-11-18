@@ -57,5 +57,5 @@ sed -i '/setup_requires/d' setup.py
 %{python3_sitelib}/python_box-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 3.4.5-1
+* Mon Nov 18 2019 Evgeni Golov - 3.4.5-1
 - Initial package.

@@ -8,7 +8,7 @@ Summary:        Yet another URL library
 
 License:        Apache 2
 URL:            https://github.com/aio-libs/yarl/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/y/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -43,5 +43,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 08 2019 Evgeni Golov - 1.3.0-1
+* Mon Nov 18 2019 Evgeni Golov - 1.3.0-1
 - Initial package.

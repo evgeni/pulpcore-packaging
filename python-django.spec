@@ -9,7 +9,7 @@ Summary:        A high-level Python Web framework that encourages rapid developm
 
 License:        BSD
 URL:            https://www.djangoproject.com/
-Source0:        %{pypi_source Django}
+Source0:        https://files.pythonhosted.org/packages/source/D/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -65,5 +65,5 @@ popd
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 2.2.7-1
+* Mon Nov 18 2019 Evgeni Golov - 2.2.7-1
 - Initial package.

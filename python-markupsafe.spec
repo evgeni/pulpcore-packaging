@@ -9,7 +9,7 @@ Summary:        Safely add untrusted strings to HTML/XML markup
 
 License:        BSD-3-Clause
 URL:            https://palletsprojects.com/p/markupsafe/
-Source0:        %{pypi_source MarkupSafe}
+Source0:        https://files.pythonhosted.org/packages/source/M/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
@@ -52,5 +52,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitearch}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 1.1.1-1
+* Mon Nov 18 2019 Evgeni Golov - 1.1.1-1
 - Initial package.

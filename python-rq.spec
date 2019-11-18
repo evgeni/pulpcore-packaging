@@ -8,7 +8,7 @@ Summary:        RQ is a simple, lightweight, library for creating background job
 
 License:        BSD
 URL:            https://github.com/nvie/rq/
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/r/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -49,5 +49,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 1.1.0-1
+* Mon Nov 18 2019 Evgeni Golov - 1.1.0-1
 - Initial package.

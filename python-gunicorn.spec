@@ -50,5 +50,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 15 2019 Evgeni Golov - 20.0.0-1
+* Mon Nov 18 2019 Evgeni Golov - 20.0.0-1
 - Initial package.

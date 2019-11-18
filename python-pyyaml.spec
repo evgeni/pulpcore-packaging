@@ -9,7 +9,7 @@ Summary:        YAML parser and emitter for Python
 
 License:        MIT
 URL:            https://github.com/yaml/pyyaml
-Source0:        %{pypi_source PyYAML}
+Source0:        https://files.pythonhosted.org/packages/source/P/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  libyaml-devel
@@ -59,5 +59,5 @@ rm -rf ext/_yaml.c
 %{python3_sitearch}/*
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 5.1.2-1
+* Mon Nov 18 2019 Evgeni Golov - 5.1.2-1
 - Initial package.

@@ -50,5 +50,5 @@ sed -i 's/long_description = f.read.*/long_description = "dotenv"/' setup.py
 %{python3_sitelib}/python_dotenv-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 0.10.3-1
+* Mon Nov 18 2019 Evgeni Golov - 0.10.3-1
 - Initial package.

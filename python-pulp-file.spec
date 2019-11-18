@@ -47,5 +47,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/pulp_file-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Sun Nov 17 2019 Evgeni Golov - 0.1.0rc1-1
+* Mon Nov 18 2019 Evgeni Golov - 0.1.0rc1-1
 - Initial package.

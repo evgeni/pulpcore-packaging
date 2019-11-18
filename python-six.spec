@@ -8,7 +8,7 @@ Summary:        Python 2 and 3 compatibility utilities
 
 License:        MIT
 URL:            https://github.com/benjaminp/six
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/s/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -43,5 +43,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 1.13.0-1
+* Mon Nov 18 2019 Evgeni Golov - 1.13.0-1
 - Initial package.

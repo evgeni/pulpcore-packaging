@@ -8,7 +8,7 @@ Summary:        Python client library for Core API
 
 License:        BSD
 URL:            https://github.com/core-api/python-client
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -47,5 +47,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 2.3.3-1
+* Mon Nov 18 2019 Evgeni Golov - 2.3.3-1
 - Initial package.

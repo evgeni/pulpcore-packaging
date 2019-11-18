@@ -9,7 +9,7 @@ Summary:        A very fast and expressive template engine
 
 License:        BSD-3-Clause
 URL:            https://palletsprojects.com/p/jinja/
-Source0:        %{pypi_source Jinja2}
+Source0:        https://files.pythonhosted.org/packages/source/J/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -53,5 +53,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 2.10.3-1
+* Mon Nov 18 2019 Evgeni Golov - 2.10.3-1
 - Initial package.
