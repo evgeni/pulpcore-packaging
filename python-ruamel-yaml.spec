@@ -1,14 +1,15 @@
 # Created by pyp2rpm-3.3.3
 %global pypi_name ruamel.yaml
+%global srcname ruamel-yaml
 
-Name:           python-%{pypi_name}
+Name:           python-%{srcname}
 Version:        0.16.5
 Release:        1%{?dist}
 Summary:        ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
 
 License:        MIT license
 URL:            https://bitbucket.org/ruamel/yaml
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/r/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -22,13 +23,12 @@ changing. See the API doc for details. Currently existing functionality will
 throw a warning before being changed/removed. **For production systems you
 should pin the version...
 
-%package -n     python3-%{pypi_name}
+%package -n     python3-%{srcname}
 Summary:        %{summary}
-Requires:       python3-ruamel.yaml.clib
-Provides:       python3-ruamel-yaml = %{version}-%{release}
-%{?python_provide:%python_provide python3-%{pypi_name}}
+Requires:       python3-ruamel-yaml-clib
+%{?python_provide:%python_provide python3-%{srcname}}
 
-%description -n python3-%{pypi_name}
+%description -n python3-%{srcname}
 ruamel.yaml ruamel.yaml is a YAML 1.2 loader/dumper package for
 Python.:version: 0.16.5 :updated: 2019-08-18 :documentation: :repository:
 :pypi: Starting with version 0.15.0 the way YAML files are loaded and dumped is
@@ -47,7 +47,7 @@ rm -rf %{pypi_name}.egg-info
 %install
 %{__python3} setup.py install --single-version-externally-managed --skip-build --root $RPM_BUILD_ROOT
 
-%files -n python3-%{pypi_name}
+%files -n python3-%{srcname}
 %license LICENSE
 %doc README.rst
 %{python3_sitelib}/ruamel
@@ -55,5 +55,5 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Thu Nov 07 2019 Evgeni Golov - 0.16.5-1
+* Mon Nov 18 2019 Evgeni Golov - 0.16.5-1
 - Initial package.

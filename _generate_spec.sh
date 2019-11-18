@@ -5,7 +5,7 @@ TEMPLATE=./_pulp3.spec
 
 while read line; do
   pkg=$(echo ${line} |cut -f1 -d=)
-  pkg_lower=$(echo ${pkg} |tr '[A-Z]' '[a-z]')
+  pkg_lower=$(echo ${pkg} |tr '[A-Z]' '[a-z]' | tr '.' '-')
   version=$(echo ${line} | cut -f3 -d=)
   if [[ $pkg != $pkg_lower ]]; then
     rpm_name_arg="-r python-${pkg_lower}"
