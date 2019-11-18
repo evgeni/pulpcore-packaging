@@ -2,13 +2,13 @@
 %global pypi_name backoff
 
 Name:           python-%{pypi_name}
-Version:        1.8.1
+Version:        1.9.0
 Release:        1%{?dist}
 Summary:        Function decoration for backoff and retry
 
 License:        None
 URL:            https://github.com/litl/backoff
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/b/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
@@ -48,5 +48,5 @@ and external
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
 
 %changelog
-* Fri Nov 08 2019 Evgeni Golov - 1.8.1-1
+* Mon Nov 18 2019 Evgeni Golov - 1.9.0-1
 - Initial package.
