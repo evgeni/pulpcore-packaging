@@ -3,10 +3,12 @@ aiohttp==3.6.2
 async-timeout==3.0.1
 attrs==19.3.0
 backoff==1.9.0
+cffi==1.13.2
 chardet==3.0.4
 Click==7.0
 coreapi==2.3.3
 coreschema==0.0.4
+cryptography==2.8
 Django==2.2.7
 django-filter==2.2.0
 djangorestframework==3.10.3
@@ -14,6 +16,8 @@ djangorestframework-queryfields==1.0.0
 drf-nested-routers==0.91
 drf-yasg==1.17.0
 dynaconf==2.2.0
+ecdsa==0.13.3
+future==0.18.2
 gunicorn==20.0.0
 idna==2.8
 idna-ssl==1.1.0
@@ -24,8 +28,13 @@ MarkupSafe==1.1.1
 multidict==4.5.2
 packaging==19.2
 psycopg2==2.8.4
+pulp-container==1.0.0rc1
 pulp-file==0.1.0rc1
 pulpcore==3.0.0rc8
+pycparser==2.19
+pycryptodomex==3.9.4
+pyjwkest==1.4.2
+PyJWT==1.7.1
 pyparsing==2.4.5
 python-box==3.4.5
 python-dotenv==0.10.3
