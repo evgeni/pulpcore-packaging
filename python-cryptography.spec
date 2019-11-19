@@ -15,6 +15,9 @@ BuildConflicts: python3-cffi = 1.11.3
 BuildRequires:  python3-cffi >= 1.8
 BuildRequires:  python3-setuptools
 
+BuildRequires:  openssl-devel
+BuildRequires:  gcc
+
 %description
 %{summary}
 
