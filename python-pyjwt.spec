@@ -21,6 +21,8 @@ BuildRequires:  python3-setuptools
 %package -n     python3-%{srcname}
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{srcname}}
+Provides:       python3-jwt = %{version}-%{release}
+Requires:       python3-cryptography >= 1.4
 Requires:       python3-setuptools
 
 %description -n python3-%{srcname}
