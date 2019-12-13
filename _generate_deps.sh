@@ -8,7 +8,6 @@ pip3 install $PULPCORE_PACKAGES
 pip3 freeze |sed '/certifi/d' > $PULPCORE_REQUIREMENTS
 
 pip3 install git+https://github.com/evgeni/pyp2rpm.git@foreman#egg=pyp2rpm
-pip3 install git+https://github.com/pixelb/crudini.git@0.9.3#egg=crudini
 
 if [ -d $FOREMAN_PACKAGING ]; then
   pushd $FOREMAN_PACKAGING

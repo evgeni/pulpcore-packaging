@@ -1,6 +1,6 @@
 FROM centos:7
 
-RUN yum install -y epel-release && yum install -y postgresql-devel gcc python3 python3-devel python3-pip git git-annex rpm-build rpmdevtools && yum clean all
+RUN yum install -y epel-release && yum install -y postgresql-devel gcc python3 python3-devel python3-pip git git-annex rpm-build rpmdevtools crudini pyp2rpm && yum clean all
 
 COPY _generate_deps.sh /app/_generate_deps.sh
 
