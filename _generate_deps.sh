@@ -10,7 +10,14 @@ pip3 freeze |sed '/certifi/d' > $PULPCORE_REQUIREMENTS
 pip3 install git+https://github.com/evgeni/pyp2rpm.git@foreman#egg=pyp2rpm
 
 if [ -d $FOREMAN_PACKAGING ]; then
-  pushd $FOREMAN_PACKAGING
+
+  git clone --branch rpm/develop https://github.com/theforeman/foreman-packaging $FOREMAN_PACKAGING/git
+
+  pushd $FOREMAN_PACKAGING/git
+
+  git config --local user.email "${EMAIL:-root@localhost}"
+  git config --local user.name "${NAME:-root}"
+  export RPM_PACKAGER="${NAME}"
 
   while read line; do
     pkg=${line%==*}
