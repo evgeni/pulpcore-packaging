@@ -1,25 +1,33 @@
 # pulp3 RPMs
 
-## requirements
+This repository contains scripts and container files that can be used to add and update RPM packages for pulpcore to foreman-packaging.
 
-the scripts in this repository require the [`foreman` branch of `evgeni/pyp2rpm`](https://github.com/evgeni/pyp2rpm/tree/foreman) which contains several patches from upstream PRs
+## Dependencies
 
-## collect dependencies
+* podman, docker, or some other container runtime
 
+## Configure
+
+For the tools to work properly, you'll need to provide the container with your name and email address. The simplest way is to create a `packaging.env` file like this:
 ```
-podman run -ti -v $(pwd):/app:Z --rm centos:7 /app/_generate_deps.sh
-```
-
-## generate
-
-using `pyp2rpm` (latest git, 3.3.3 release has a bug with custom templates):
-
-```
-pyp2rpm -b3 -t ./_pulp3.spec -o fedora --no-autonc psycopg2 > python-psycopg2.spec
+NAME=John Doe
+EMAIL=john@example.org
 ```
 
-### all
+The file can be later passed to the container runtime with `--env-file`. You can of course also use `--env` to specify the values of `NAME` and `EMAIL` directly.
+
+## Execution
+
+### Build
 
 ```
-./_generate_spec.sh < pulpcore-requirements.txt
+podman build --tag tfm-pulpcore-builder .
+```
+
+### Run
+
+1. create an empty directory to host the resulting packages
+2. pass the directory as a volume for `/app/foreman-packaging` to the container:
+```
+podman run --rm --volume $(pwd)/foreman-packaging/:/app/foreman-packaging/:Z  --env-file packaging.env tfm-pulpcore-builder
 ```
