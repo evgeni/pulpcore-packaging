@@ -1,6 +1,8 @@
-# pulp3 RPMs
+# pulpcore RPMs
 
 This repository contains scripts and container files that can be used to add and update RPM packages for pulpcore to foreman-packaging.
+
+The container is designed to be run against an empty directory, and produce a set of commits against `foreman-packaging` containing the generated packages.
 
 ## Dependencies
 
