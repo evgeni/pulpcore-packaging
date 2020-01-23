@@ -22,7 +22,7 @@ if [ -d $FOREMAN_PACKAGING ]; then
   while read line; do
     pkg=${line%==*}
     version=${line#*==}
-    REWRITE_ON_SAME_VERSION=false ./add_pypi_package.sh ${pkg} ${version} katello-nightly-pulpcore-el7 pulpcore ./pyp2rpm/pulpcore.spec
+    REWRITE_ON_SAME_VERSION=false ./add_pypi_package.sh ${pkg} ${version} katello-pulpcore-nightly-el7 pulpcore ./pyp2rpm/pulpcore.spec
   done < $PULPCORE_REQUIREMENTS
 
   popd
