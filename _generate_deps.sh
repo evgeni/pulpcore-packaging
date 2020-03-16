@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PULPCORE_PACKAGES="pulpcore pulp-file pulp-container"
+PULPCORE_PACKAGES="pulpcore==3.2.0 pulp-file==0.2.0 pulp-container==1.2.0"
 PULPCORE_REQUIREMENTS="/app/pulpcore-requirements.txt"
 FOREMAN_PACKAGING="/app/foreman-packaging"
 
