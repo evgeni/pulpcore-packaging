@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PULPCORE_PACKAGES="pulpcore==3.2.0 pulp-file==0.2.0 pulp-container==1.2.0"
+PULPCORE_PACKAGES="pulpcore==3.2.1 pulp-file==0.2.0 pulp-container==1.2.0 dynaconf==3.0.0rc1 pulp-rpm==3.2.0 pulp-ansible==0.2.0b11"
 PULPCORE_REQUIREMENTS="/app/pulpcore-requirements.txt"
 FOREMAN_PACKAGING="/app/foreman-packaging"
 
