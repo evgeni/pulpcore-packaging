@@ -1,11 +1,12 @@
 #!/bin/bash
 
-PULPCORE_PACKAGES="pulpcore==3.2.0 pulp-file==0.2.0 pulp-container==1.2.0"
+PULPCORE_PACKAGES="pulpcore==3.2.1 pulp-file==0.2.0 pulp-container==1.2.0 pulp-rpm==3.2.0 dynaconf==3.0.0rc1"
 PULPCORE_REQUIREMENTS="/app/pulpcore-requirements.txt"
 FOREMAN_PACKAGING="/app/foreman-packaging"
 
+pip3 install scikit-build
 pip3 install $PULPCORE_PACKAGES
-pip3 freeze |sed '/certifi/d' > $PULPCORE_REQUIREMENTS
+pip3 freeze |sed '/certifi/d; /gobject/d' > $PULPCORE_REQUIREMENTS
 
 pip3 install git+https://github.com/evgeni/pyp2rpm.git@foreman#egg=pyp2rpm
 
