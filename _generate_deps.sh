@@ -12,9 +12,10 @@ pip3 install git+https://github.com/evgeni/pyp2rpm.git@foreman#egg=pyp2rpm
 
 if [ -d $FOREMAN_PACKAGING ]; then
 
-  git clone --branch rpm/develop https://github.com/theforeman/foreman-packaging $FOREMAN_PACKAGING/git
+  git clone --branch rpm/develop https://github.com/theforeman/foreman-packaging $FOREMAN_PACKAGING/foreman
+  git clone --branch rpm/3.6 https://github.com/theforeman/pulpcore-packaging $FOREMAN_PACKAGING/pulpcore
 
-  pushd $FOREMAN_PACKAGING/git
+  pushd $FOREMAN_PACKAGING/pulpcore
 
   git config --local user.email "${EMAIL:-root@localhost}"
   git config --local user.name "${NAME:-root}"
@@ -23,7 +24,8 @@ if [ -d $FOREMAN_PACKAGING ]; then
   while read line; do
     pkg=${line%==*}
     version=${line#*==}
-    REWRITE_ON_SAME_VERSION=false ./add_pypi_package.sh ${pkg} ${version} katello-pulpcore-nightly-el7 pulpcore ./pyp2rpm/pulpcore.spec
+    REWRITE_ON_SAME_VERSION=false $FOREMAN_PACKAGING/foreman/add_pypi_package.sh ${pkg} ${version} katello-pulpcore-nightly-el7 '/' $FOREMAN_PACKAGING/foreman/pyp2rpm/pulpcore.spec
+    sleep 20
   done < $PULPCORE_REQUIREMENTS
 
   popd
