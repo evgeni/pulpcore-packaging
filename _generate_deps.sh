@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PULPCORE_PACKAGES="pulpcore==3.4.1 pulp-file==1.0.1 pulp-container==1.4.2 pulp-rpm==3.5.0 dynaconf==3.0.0 pulp-certguard==0.1.0rc5 galaxy-importer==0.2.8rc9 pulp-ansible==0.2.0b15 galaxy_ng==4.2.0a12"
+PULPCORE_PACKAGES="pulpcore==3.6.0 pulp-2to3-migration==0.3.0 pulp-file==1.2.0 pulp-container==2.0.0 pulp-rpm==3.6.1 pulp-certguard==1.0.2 galaxy-importer==0.2.8 pulp-ansible==0.2.0 galaxy_ng==4.2.0a12"
 PULPCORE_REQUIREMENTS="/app/pulpcore-requirements.txt"
 FOREMAN_PACKAGING="/app/foreman-packaging"
 
