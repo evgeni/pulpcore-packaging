@@ -1,12 +1,12 @@
 #!/bin/bash
 
-PULPCORE_PACKAGES="pulpcore==3.6.0 pulp-2to3-migration==0.3.0 pulp-file==1.2.0 pulp-container==2.0.0 pulp-rpm==3.6.1 pulp-certguard==1.0.2 galaxy-importer==0.2.8 pulp-ansible==0.2.0 galaxy_ng==4.2.0a12"
+PULPCORE_PACKAGES="pulpcore==3.6.2 pulp-file==1.2.0 pulp-container==2.0.0 pulp-deb==2.6.1 pulp-rpm==3.6.1 pulp-certguard==1.0.2 galaxy-importer==0.2.8 pulp-ansible==0.2.0"
 PULPCORE_REQUIREMENTS="/app/pulpcore-requirements.txt"
 FOREMAN_PACKAGING="/app/foreman-packaging"
 
 pip3 install scikit-build
 pip3 install $PULPCORE_PACKAGES
-pip3 freeze |sed '/gobject/d; /scikit/d; /libcomps/d; /solv/d; /createrepo/d; /distro/d' > $PULPCORE_REQUIREMENTS
+pip3 freeze |sed '/gobject/d; /scikit/d; /libcomps/d; /solv/d; /createrepo/d; /distro/d; /^ansible/d' > $PULPCORE_REQUIREMENTS
 
 pip3 install git+https://github.com/evgeni/pyp2rpm.git@foreman#egg=pyp2rpm
 
@@ -25,7 +25,7 @@ if [ -d $FOREMAN_PACKAGING ]; then
     pkg=${line%==*}
     version=${line#*==}
     REWRITE_ON_SAME_VERSION=false $FOREMAN_PACKAGING/foreman/add_pypi_package.sh ${pkg} ${version} katello-pulpcore-nightly-el7 '/' $FOREMAN_PACKAGING/foreman/pyp2rpm/pulpcore.spec
-    sleep 20
+    sleep 5
   done < $PULPCORE_REQUIREMENTS
 
   popd
